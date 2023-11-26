@@ -1587,9 +1587,9 @@ if sdk_config.get("MBEDTLS_CERTIFICATE_BUNDLE", False):
 #
 
 action = copy.deepcopy(env["BUILDERS"]["ElfToBin"].action)
-action.cmd_list = env["BUILDERS"]["ElfToBin"].action.cmd_list.replace(
-    "-o", "--elf-sha256-offset 0xb0 -o"
-)
+#action.cmd_list = env["BUILDERS"]["ElfToBin"].action.cmd_list.replace(
+#    "-o", "--elf-sha256-offset 0xb0 -o"
+#)
 env["BUILDERS"]["ElfToBin"].action = action
 
 #
